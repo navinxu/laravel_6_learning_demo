@@ -98,3 +98,53 @@ Route::get('user8/{userId}', function ($userId) {
 Route::get('/redirect_url', function() {
     return redirect()->route('user', ['userId' => '123'], 302);
 });
+
+//Route::middleware(['first', 'second'])->group(function() {
+//    Route::get('/', function() {
+//        return 'homeIndex';
+//    });
+//});
+
+
+// Route::namespace('Admin')->group(function() {
+//
+// });
+
+//Route::prefix('admin')->group(function() {
+//    Route::get('users', function() {
+//        return 'admin/users';
+//    });
+//});
+
+// Route::name('admin.')->group(function () {
+//     Route::get('users', function() {
+//         return 'admin.users';
+//     })->name('users');
+// });
+
+//Route::get('api/users/{user}', function (App\User $user) {
+//    return $user->email;
+//});
+
+// Route::get('profile/{user}', function (App\User $user) {
+//     //
+// });
+
+
+Route::fallback(function() {
+    return 'Error: No route matches.';
+});
+
+//Route::middleware('auth::api', 'throttle:60,1')->group(function () {
+//    Route::get('/user', function () {
+//        //
+//    });
+//});
+
+
+//Route::middleware('auth:api', 'thottle:rate_limit,1')->group(function () {
+//    Route::get('/user', function () {
+//        //
+//    });
+//});
+

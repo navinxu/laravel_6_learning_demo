@@ -29,6 +29,15 @@ class RouteServiceProvider extends ServiceProvider
         Route::pattern('name', '[a-zA-Z]+');
 
         parent::boot();
+
+        //Route::model('user', App\User::class);
+
+        // Route::bind('user', function ($value) {
+        //     return App\User::where('name', $value)->first() ?? abort(404);
+        // });
+
+
+
     }
 
     /**

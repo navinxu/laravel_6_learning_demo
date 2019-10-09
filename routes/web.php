@@ -147,4 +147,12 @@ Route::fallback(function() {
 //        //
 //    });
 //});
+//
 
+Route::get('age/{age}', function ($age) {
+    return $age;
+})->middleware('age');
+
+Route::get('home', function() {
+    return 'This is home page';
+});
